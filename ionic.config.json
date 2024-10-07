@@ -1,0 +1,7 @@
+{
+  "name": "Moriarty AI",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
