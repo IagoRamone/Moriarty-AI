@@ -1,3 +1,41 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-header>
+      <ion-toolbar>
+          <ion-title>Moriarty AI</ion-title>
+      </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="content">
+      <div class="cabecalho">
+          <h2 class="titulo">Seja, Bem vindo</h2>
+          <h4 class="subtitulo">Como posso te ajudar?</h4>
+
+          <!--Lista de Sugestões-->
+          <ion-list class="lista_sugestoes">
+              <ion-item class="sugestoes">
+                  <h4 class="texto">Planeje um dia pra cuidar da mente</h4>
+                  <ion-icon name="create" slot="end"></ion-icon>
+              </ion-item>
+              <ion-item class="sugestoes">
+                  <h4 class="texto">Como melhorar o dia</h4>
+                  <ion-icon name="bulb" slot="end"></ion-icon>
+              </ion-item>
+              <ion-item class="sugestoes">
+                  <h4 class="texto">Crie uma receita</h4>
+                  <ion-icon name="leaf" slot="end"></ion-icon>
+              </ion-item>
+              <ion-item class="sugestoes">
+                  <h4 class="texto">Escreva um script em Python</h4>
+                  <ion-icon name="code" slot="end"></ion-icon>
+              </ion-item>
+          </ion-list>     
+      </div>
+      <div #listaChat class="lista_chat"></div>
+
+      <form #formulario class="formulario" (submit)="enviarMensagem($event)">
+        <input type="text" class="input_escrever" placeholder="Digite sua mensagem..." />
+        <button type="submit">Enviar</button>
+      </form>
+      
+  </ion-content>
 </ion-app>
