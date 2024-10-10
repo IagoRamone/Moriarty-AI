@@ -1,0 +1,42 @@
+ion-content {
+  display: flex;
+  flex-direction: column; // Organiza os elementos em coluna
+  justify-content: space-between; // Coloca espaço entre os elementos
+  padding-bottom: 70px; // Adiciona espaço para evitar que o conteúdo fique atrás do footer
+}
+
+.lista_chat {
+  flex: 1; // Permite que esta área cresça para ocupar o espaço restante
+  overflow-y: auto; // Adiciona rolagem se o conteúdo for muito grande
+}
+
+.formulario {
+  display: flex; // Alinha o input e o botão na mesma linha
+  margin: 10px; // Adiciona uma margem
+}
+
+.input_escrever {
+  flex: 1; // Faz o input ocupar o máximo de espaço
+  margin-right: 10px; // Adiciona espaço entre o input e o botão
+}
+
+footer {
+  background: #333333; // Cor de fundo do footer
+  height: 60px; // Ajuste a altura do footer conforme necessário
+  display: flex;
+  flex-direction: column; // Organiza os elementos do footer em coluna
+  align-items: center; // Centraliza os itens no eixo transversal
+  justify-content: center; // Centraliza os itens no eixo principal
+  color: #fff;
+}
+
+.footer-content {
+  text-align: center; // Centraliza o texto
+  margin: 10px 0; // Adiciona uma margem vertical
+}
+
+.botao-footer {
+  text-align: center; // Centraliza o texto
+  font-size: 14px; // Define o tamanho da fonte
+  padding: 10px 0; // Adiciona padding para o botão
+}

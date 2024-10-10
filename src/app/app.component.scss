@@ -18,121 +18,54 @@
 }
 
 .content {
-    background: black;
-}
-
-.cabecalho, .area_escrever {
-    color: black;
-}
-
-.cabecalho, .lista_chat .mensagem, .formulario {
-    max-width: 1000px;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column; 
+    height: 100vh; /* Ocupa toda a altura da viewport */
+    background: var(--cor-primaria);
+    padding: 1rem;
 }
 
 .cabecalho {
-    padding: 1rem;
-}
+    text-align: center;
+    color: black;
 
-.cabecalho :where(.titulo, .subtitulo) {
-    font-weight: 500;
-    line-height: 3.6rem;
-}
-
-.cabecalho .titulo {
-    font-size: 2.7rem;
-    background-clip: text;
-    background: linear-gradient(to right, #4285f4, #d96570);  
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;  
-}
-
-.cabecalho .subtitulo {
-    font-size: 2.4rem;
-    color: var(--subtitulo-cor);
-}
-
-.lista_sugestoes {
-    margin-top: 9.5vh;
-    list-style: none;
-    display: flex;
-    gap: 1.25rem;
-    overflow-x: auto;
-    scrollbar-width: none;
-}
-
-.lista_sugestoes .sugestoes {
-    background: var(--cor-secundaria);
-    padding: 1.25rem;
-    cursor: pointer;
-    width: 227px;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: space-between;
-    border-radius: 0.75rem;
-
-    &:hover {
-        background: var(--cor-secundaria-hover);
+    .titulo {
+        font-size: 2.7rem;
+        font-weight: 600;
+        background: linear-gradient(to right, #4285f4, #d96570);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;  
     }
+
+    .subtitulo {
+        font-size: 2.4rem;
+        color: var(--subtitulo-cor);
+    }
+}
+
+.card-container {
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+    gap: 1rem; /* Espaçamento entre os cards */
+    margin: 2rem 0; /* Margem superior e inferior */
 }
 
 .lista_chat {
-    padding: 2rem 1rem 12rem;
-    max-width: 100vh;
-    overflow-y: auto;
-    margin-bottom: 60px; // Espaço para o formulário
-}
-
-.area_escrever {
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    flex-grow: 1; // Permite que a lista de chat cresça
     padding: 1rem;
-    background: var(--cor-primaria);
-}
-
-.input_entrada {
-    height: 56px;
-    width: 100%;
-    display: flex;
-    position: relative;
-}
-
-ion-content {
-    --background: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end; 
-  
-    .chat-container {
-        flex-grow: 1;
-        overflow-y: auto; 
-        padding-bottom: 60px; 
-    }
-
-    .lista_chat {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        padding: 15px;
-    }
+    overflow-y: auto;
 }
 
 .formulario {
     display: flex;
     align-items: center;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 10px;
+    padding: 0.5rem 1rem;
     background-color: white;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    position: relative; // Permite que o formulário se ajuste corretamente
 
     .input_escrever {
-        flex: 1;
+        flex: 1; // Permite que o campo de entrada ocupe o máximo de espaço
         padding: 10px;
         border: 1px solid #ccc;
         border-radius: 5px;
@@ -151,4 +84,11 @@ ion-content {
             background-color: #0056b3;  
         }
     }
+}
+
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background: var(--cor-secundaria);
+    color: white; 
 }
